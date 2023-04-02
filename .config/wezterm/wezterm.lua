@@ -13,22 +13,7 @@ end
 -- This is where you actually apply your config choices
 config.color_scheme = 'Darcula (base16)'
 config.font = wezterm.font("Hack Nerd Font")
-config.disable_default_key_bindings = true
 config.audible_bell = "Disabled"
-
--- config keybindings
-config.keys = {
-  {
-    key = "t",
-    mods = "CTRL",
-    action = wezterm.action.SpawnTab "CurrentPaneDomain"
-  },
-  {
-    key = "w",
-    mods = "CTRL",
-    action = wezterm.action.CloseCurrentTab{confirm=true} 
-  },
-}
 
 -- wezterm starts loading from HOME directory
 config.window_background_image = ".config/wezterm/bg-bladerunner49.jpg"
