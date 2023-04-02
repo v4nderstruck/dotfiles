@@ -52,7 +52,12 @@ lvim.plugins = {
     config = function()
       require("copilot").setup({
         panel = {
-          enabled = false,
+          enabled = true,
+          auto_refresh = true,
+          keymap = {
+            open = "<M-p>",
+            refresh = "<M-r>",
+          }
         },
         suggestion = {
           auto_trigger = false;
