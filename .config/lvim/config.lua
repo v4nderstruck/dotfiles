@@ -52,11 +52,11 @@ lvim.plugins = {
     config = function()
       require("copilot").setup({
         panel = {
-          enabled = true,
+          enabled = false,
         },
         suggestion = {
-          auto_trigger = true;
-          enabled = true,
+          auto_trigger = false;
+          enabled = false,
           keymap = {
             accept = "<M-l>",
             dismiss = "<M-h>",
@@ -65,13 +65,13 @@ lvim.plugins = {
       })
     end,
   },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup()
-  --   end
-  -- },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
   { "catppuccin/nvim", name = "catppuccin" },
   {
     "windwp/nvim-ts-autotag",
@@ -87,7 +87,7 @@ lvim.plugins = {
         -- Configuration here, or leave empty to use defaults
       })
     end
-  }, 
+  },
   "dracula/vim",
   "mbbill/undotree",
 }
@@ -96,23 +96,5 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "clang-format", filetypes = { "java" } },
 }
--- setup copilot
--- local has_words_before = function()
---   if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
---   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
---   return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
--- end
--- local cmp = require "lvim.core.cmp"
--- cmp.setup({
---   mapping = {
---     ["<Tab>"] = vim.schedule_wrap(function(fallback)
---       if cmp.visible() and has_words_before() then
---         cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
---       else
---         fallback()
---       end
---     end),
---   },
--- })
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
