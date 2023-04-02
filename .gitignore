@@ -1,0 +1,16 @@
+# ignore everything by default
+*
+
+# this file
+!.gitignore
+
+# dotfiles 
+!.config
+
+# lunar vim
+!.config/lvim
+!.config/lvim/**/*
+
+# wezterm
+!.config/wezterm
+!.config/wezterm/*
