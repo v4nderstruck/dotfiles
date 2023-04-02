@@ -14,6 +14,7 @@ end
 config.color_scheme = 'Darcula (base16)'
 config.font = wezterm.font("Hack Nerd Font")
 config.disable_default_key_bindings = true
+config.audible_bell = "Disabled"
 
 -- config keybindings
 config.keys = {
