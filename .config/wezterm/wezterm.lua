@@ -18,7 +18,7 @@ config.audible_bell = "Disabled"
 -- wezterm starts loading from HOME directory
 config.window_background_image = ".config/wezterm/bg-bladerunner49.jpg"
 config.window_background_image_hsb = {
-  brightness = 0.05,
+  brightness = 0.15,
   hue = 1.0,
   saturation = 1.0,
 }
