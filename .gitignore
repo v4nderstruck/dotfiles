@@ -10,7 +10,13 @@
 # lunar vim
 !.config/lvim
 !.config/lvim/**/*
+.config/lvim/plugin/packer_compiled.lua
 
 # wezterm
 !.config/wezterm
 !.config/wezterm/*
+
+# i3
+
+!.config/i3
+!.config/i3/**/*
