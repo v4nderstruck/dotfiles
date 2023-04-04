@@ -12,7 +12,7 @@ end
 
 -- This is where you actually apply your config choices
 config.color_scheme = 'Darcula (base16)'
-config.font = wezterm.font("Hack Nerd Font")
+config.font = wezterm.font("FiraCode Nerd Font")
 config.audible_bell = "Disabled"
 
 -- wezterm starts loading from HOME directory
