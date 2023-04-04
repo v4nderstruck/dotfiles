@@ -3,7 +3,7 @@
 
 # dot config files
 !.gitignore
-
+!README.md
 # dotfiles 
 !.config
 
