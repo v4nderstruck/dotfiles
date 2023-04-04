@@ -3,7 +3,6 @@
 
 # dot config files
 !.gitignore
-!.xinitrc
 
 # dotfiles 
 !.config
