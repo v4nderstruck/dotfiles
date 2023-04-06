@@ -56,15 +56,15 @@ lvim.plugins = {
           auto_refresh = true,
           keymap = {
             open = "<M-p>",
-            refresh = "<M-r>",
           }
         },
         suggestion = {
           auto_trigger = false;
-          enabled = false,
+          enabled = true,
           keymap = {
             accept = "<M-l>",
             dismiss = "<M-h>",
+            next = "<M-r>",
           }
         }
       })
@@ -99,6 +99,7 @@ lvim.plugins = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "clang-format", filetypes = { "java" } },
+  { command = "autopep8", filetypes = { "python" } },
 }
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
