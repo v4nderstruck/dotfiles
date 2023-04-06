@@ -13,13 +13,13 @@ end
 -- This is where you actually apply your config choices
 config.color_scheme = 'Darcula (base16)'
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
-config.font = wezterm.font("Fire Code")
+config.font = wezterm.font("FiraCode Nerd Font")
 config.audible_bell = "Disabled"
 
 -- wezterm starts loading from HOME directory
-config.window_background_image = ".config/wezterm/bg-bladerunner49.jpg"
+config.window_background_image = os.getenv( "HOME" ) .. "/.config/wezterm/bg-bladerunner49.jpg"
 config.window_background_image_hsb = {
-  brightness = 0.15,
+  brightness = 0.35,
   hue = 1.0,
   saturation = 1.0,
 }
