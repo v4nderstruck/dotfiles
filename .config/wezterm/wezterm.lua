@@ -14,6 +14,7 @@ end
 config.color_scheme = 'Darcula (base16)'
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.font = wezterm.font("FiraCode Nerd Font")
+config.font_size = 14
 config.audible_bell = "Disabled"
 
 -- wezterm starts loading from HOME directory
