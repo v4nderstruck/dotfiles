@@ -17,6 +17,15 @@ config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 14
 config.audible_bell = "Disabled"
 
+-- keybinds
+config.keys = {
+  {
+    key = "P",
+    mods = "SUPER",
+    action = wezterm.action.ActivateCommandPalette
+  }
+}
+
 -- wezterm starts loading from HOME directory
 config.window_background_image = os.getenv( "HOME" ) .. "/.config/wezterm/bg-bladerunner49.jpg"
 config.window_background_image_hsb = {
