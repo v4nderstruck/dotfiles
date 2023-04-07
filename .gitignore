@@ -14,7 +14,7 @@
 
 # wezterm
 !.config/wezterm
-!.config/wezterm/*
+!.config/wezterm/**/*
 
 # i3
 !.config/i3
