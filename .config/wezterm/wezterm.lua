@@ -1,6 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
+local this_os = os.getenv("DOTFILES_OS")
 
 -- maximize window on startup
 wezterm.on('gui-startup', function(cmd)
@@ -21,7 +22,7 @@ end
 config.color_scheme = 'Darcula (base16)'
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = 14
+config.font_size = this_os == "MACOS" and 14 or 12
 config.audible_bell = "Disabled"
 
 -- keybinds
