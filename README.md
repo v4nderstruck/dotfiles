@@ -1,4 +1,4 @@
-```
-export PATH=$PATH:$HOME/.local/bin
-alias lv="lvim ."
-```
+## Setup 
+
+- install font "FiraCode Nerd Font"
+- set launch environment variable (not in shell): `DOTFILES_OS="Linux" | "MACOS"`

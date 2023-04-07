@@ -1,3 +1,7 @@
+function ternary ( cond , T , F )
+    if cond then return T else return F end
+end
+
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
@@ -22,7 +26,7 @@ end
 config.color_scheme = 'Darcula (base16)'
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = this_os == "MACOS" and 14 or 12
+config.font_size = ternary(this_os == "MACOS", 14, 12)
 config.audible_bell = "Disabled"
 
 -- keybinds
