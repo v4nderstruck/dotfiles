@@ -50,3 +50,4 @@ config.window_background_image_hsb = {
 
 -- and finally, return the configuration to wezterm
 return config
+
