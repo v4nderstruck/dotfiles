@@ -102,4 +102,6 @@ formatters.setup {
   { command = "autopep8", filetypes = { "python" } },
 }
 -- Automatically install missing parsers when entering buffer
-lvim.builtin.treesitter.auto_install = true
+-- lvim.builtin.treesitter.auto_install = true
+lvim.builtin.treesitter.ignore_install = {"gitignore"} -- broken TS
+lvim.builtin.nvimtree.setup.view.side = "right"
