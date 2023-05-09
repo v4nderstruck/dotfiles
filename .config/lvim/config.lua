@@ -16,7 +16,7 @@ lvim.format_on_save = {
 -- lvim.use_icons = false
 
 lvim.transparent_window = true
-lvim.colorscheme = "catppuccin-frappe"
+lvim.colorscheme = "tokyonight-storm"
 lvim.format_on_save = false
 
 -- keymappings <https://www.lunarvim.org/docs/configuration/keybindings>
@@ -25,7 +25,6 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<leader>u"] = ":UndotreeToggle<cr>"
 lvim.keys.normal_mode["<leader>F"] = ":Telescope live_grep<cr>"
-
 
 -- terminal into normal mode
 function _G.set_terminal_keymaps()
@@ -59,7 +58,7 @@ lvim.plugins = {
           }
         },
         suggestion = {
-          auto_trigger = false;
+          auto_trigger = false,
           enabled = true,
           keymap = {
             accept = "<M-l>",
@@ -92,6 +91,13 @@ lvim.plugins = {
       })
     end
   },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function ()
+      require("symbols-outline").setup()
+    end
+  },
+
   "dracula/vim",
   "mbbill/undotree",
 }
@@ -99,9 +105,9 @@ lvim.plugins = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "clang-format", filetypes = { "java" } },
-  { command = "autopep8", filetypes = { "python" } },
+  { command = "autopep8",     filetypes = { "python" } },
 }
 -- Automatically install missing parsers when entering buffer
 -- lvim.builtin.treesitter.auto_install = true
-lvim.builtin.treesitter.ignore_install = {"gitignore"} -- broken TS
+lvim.builtin.treesitter.ignore_install = { "gitignore" } -- broken TS
 lvim.builtin.nvimtree.setup.view.side = "right"
