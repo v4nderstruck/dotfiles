@@ -25,8 +25,8 @@ end
 -- This is where you actually apply your config choices
 config.color_scheme = 'Darcula (base16)'
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
-config.font = wezterm.font("FiraCode Nerd Font")
-config.font_size = ternary(this_os == "MACOS", 14, 12)
+config.font = wezterm.font("FiraCode Nerd Font Mono")
+config.font_size = ternary(this_os == "MACOS", 16, 12)
 config.audible_bell = "Disabled"
 config.front_end = "WebGpu"
 -- keybinds
@@ -39,11 +39,9 @@ config.keys = {
 }
 
 -- wezterm starts loading from HOME directory
--- config.window_background_image = os.getenv("HOME") .. "/.config/wezterm/bladerunner.webm"
-config.window_background_image = os.getenv( "HOME" ) .. "/.config/wezterm/media/bg-bladerunner49.jpg"
--- config.window_background_image = os.getenv( "HOME" ) .. "/.config/wezterm/media/bladerunner.gif"
+config.window_background_image = os.getenv( "HOME" ) .. "/Pictures/apple.jpg"
 config.window_background_image_hsb = {
-  brightness = 0.35,
+  brightness = 0.10,
   hue = 1.0,
   saturation = 1.0,
 }
